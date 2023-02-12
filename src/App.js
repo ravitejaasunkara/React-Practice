@@ -16,4 +16,19 @@ export default function App() {
   //     <p>Hello</p>
   //   </div>
   // );
+  const [count, setCount] = useState(0);
+  const Increment = () => {
+    setCount((prevState) => prevState + 1);
+  };
+  const Decrement = () => {
+    setCount((prevState) => prevState - 1);
+  };
+  return (
+    <div>
+      <h2>Hello useReduce</h2>
+      <button onClick={Decrement}>Decrement</button>
+      <h3>{count}</h3>
+      <button onClick={Increment}>Increment</button>
+    </div>
+  );
 }
